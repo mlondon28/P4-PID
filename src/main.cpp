@@ -34,7 +34,6 @@ int main()
 
   // TODO: Initialize the pid variable.
   // pass initial gains kp, ki, kd to controller
-//  PID pid(1.1, 0, 5.9, false);
   PID pid(1.5,0,6.81,false);
 
   h.onMessage([&pid](uWS::WebSocket<uWS::SERVER> ws, char *data, size_t length, uWS::OpCode opCode) {

@@ -70,6 +70,7 @@ void PID::Reset(uWS::WebSocket<uWS::SERVER> ws, bool increment_index){
 
   if (increment_index){
     twiddle_index = (twiddle_index + 1) % 3;
+    //Ignore integral term. Only looking for PD controller.
     if (twiddle_index == 1){twiddle_index += 1;}
     gains[twiddle_index] += d_twiddle[twiddle_index];
 
